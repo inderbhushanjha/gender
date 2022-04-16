@@ -7,7 +7,9 @@ export default function Gender(props) {
         {props.gender == null ? (
           <h1>Chakka</h1>
         ) : (
-          props.gender.charAt(0).toUpperCase() + props.gender.slice(1)
+          <h1>
+            {props.gender.charAt(0).toUpperCase() + props.gender.slice(1)}
+          </h1>
         )}
       </h1>
     </div>
