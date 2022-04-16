@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gender/static/css/main.017ad390.css",
+    "main.js": "/gender/static/js/main.2c09f9e8.js",
+    "index.html": "/gender/index.html",
+    "main.017ad390.css.map": "/gender/static/css/main.017ad390.css.map",
+    "main.2c09f9e8.js.map": "/gender/static/js/main.2c09f9e8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.017ad390.css",
+    "static/js/main.2c09f9e8.js"
+  ]
+}
