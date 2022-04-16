@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import Gender from './components/Gender';
+import SearchBar from './components/SearchBar';
 
 function App() {
+  const [gender, setGender] = useState("");
+  const genderHandler = (inputGender) => {
+    fetch("https://api.genderize.io/?name=" + inputGender).then(response => response.json()).then(response => {
+      const gender = response.gender;
+      setGender(gender);
+    })
+  }
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <div><Gender gender={gender}></Gender></div>
+      <SearchBar getGender={genderHandler}></SearchBar>
     </div>
   );
 }
